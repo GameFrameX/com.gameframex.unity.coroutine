@@ -95,5 +95,11 @@ namespace GameFrameX.Coroutine.Runtime
         {
             StartCoroutine(_WaitForEndOfFrameFinish(callback));
         }
+
+        protected override void Awake()
+        {
+            IsAutoRegister = false;
+            base.Awake();
+        }
     }
 }

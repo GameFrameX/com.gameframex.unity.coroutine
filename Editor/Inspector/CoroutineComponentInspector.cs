@@ -14,15 +14,5 @@ namespace GameFrameX.Coroutine.Editor
     [CustomEditor(typeof(CoroutineComponent))]
     internal sealed class CoroutineComponentInspector : GameFrameworkInspector
     {
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
-
-            Repaint();
-        }
-
-        private void OnEnable()
-        {
-        }
     }
 }
