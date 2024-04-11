@@ -1,5 +1,5 @@
 {
-  "name": "com.alianblank.gameframex.coroutine",
+  "name": "com.alianblank.gameframex.unity.coroutine",
   "displayName": "Game Frame X Coroutine",
   "category": "Game Framework X",
   "description": "Game Frame X Coroutine Component",
@@ -9,7 +9,7 @@
     "Game Framework X"
   ],
   "repository": {
-    "name": "com.alianblank.gameframex.coroutine",
+    "name": "com.alianblank.gameframex.unity.coroutine",
     "url": "https://github.com/AlianBlank/com.alianblank.gameframex.unity.coroutine.git",
     "type": "git"
   },
