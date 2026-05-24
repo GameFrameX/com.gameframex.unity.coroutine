@@ -1,82 +1,106 @@
-﻿## HOMEPAGE
+<div align="center">
+  <img src="https://download.alianblank.com/gameframex/gameframex_logo_320.png" alt="Game Frame X Logo" width="160" />
+</div>
 
-GameFrameX 的 Coroutine 协程组件
+# Game Frame X Coroutine
 
-**Coroutine 协程组件 (Coroutine Component)** - 提供扩展了Unity的内建协程管理功能的接口。
+[![GitHub release](https://img.shields.io/github/v/release/GameFrameX/com.gameframex.unity.coroutine?style=flat-square)](https://github.com/GameFrameX/com.gameframex.unity.coroutine/releases)
+[![License](https://img.shields.io/github/license/GameFrameX/com.gameframex.unity.coroutine?style=flat-square)](https://github.com/GameFrameX/com.gameframex.unity.coroutine/blob/main/LICENSE.md)
+[![Documentation](https://img.shields.io/badge/Documentation-Online-blue?style=flat-square)](https://gameframex.doc.alianblank.com)
 
-# 使用文档(文档编写于GPT4)
+**All-in-One Solution for Indie Game Development · Empowering Indie Developers' Dreams**
 
-## 说明
+[Documentation](https://gameframex.doc.alianblank.com) · [Quick Start](#quick-start) · [QQ Group](https://qm.qq.com/q/5s5e1e6e6e)
 
-`CoroutineComponent` 类是游戏开发框架的一部分，用于管理和执行Unity协程。该类扩展了Unity的内建协程管理功能，允许开发者更容易地控制协程的生命周期。通过使用并发字典来跟踪执行的协程，它为停止和清理协程提供了更好的控制。
+**Language**: **English** | [简体中文](README.zh-CN.md) | [繁體中文](README.zh-TW.md) | [日本語](README.ja.md) | [한국어](README.ko.md)
 
-## 主要功能
+---
 
-1. **启动协程**
-   使用`StartCoroutine(IEnumerator enumerator)`方法来启动一个协程。这将迭代器和Unity的协程对象存储在一个并发字典中，确保可以随时访问和管理它们。
+## Project Overview
 
-2. **停止协程**
-   可以通过`StopCoroutine(IEnumerator enumerator)`或`StopCoroutine(UnityEngine.Coroutine coroutine)`方法停止单个协程。这些方法确保同时从Unity和内部字典中移除协程，防止内存泄漏。
+Game Frame X Coroutine is a Unity coroutine management package based on the GameFrameX framework, extending Unity's built-in coroutine management functionality.
 
-3. **停止所有协程**
-   通过`StopAllCoroutines()`方法停止所有正在运行的协程。该方法确保所有协程的干净停止，并清空内部跟踪字典。
+**Coroutine Component** - Provides interfaces that extend Unity's built-in coroutine management capabilities.
 
-4. **帧结束时回调**
-   `WaitForEndOfFrameFinish(System.Action callback)`方法允许在当前帧渲染结束后执行一个回调。这对于在帧的最后进行计算或更新状态非常有用。
+## Features
 
-## 如何使用
+1. **Start Coroutine**: Use `StartCoroutine(IEnumerator enumerator)` to start a coroutine. Iterators and Unity coroutine objects are stored in a concurrent dictionary for easy access and management.
 
-### 启动一个协程
+2. **Stop Coroutine**: Stop individual coroutines via `StopCoroutine(IEnumerator enumerator)` or `StopCoroutine(UnityEngine.Coroutine coroutine)`. These methods ensure coroutines are removed from both Unity and the internal dictionary, preventing memory leaks.
+
+3. **Stop All Coroutines**: Stop all running coroutines via `StopAllCoroutines()`. This method ensures clean stopping of all coroutines and clears the internal tracking dictionary.
+
+4. **End of Frame Callback**: The `WaitForEndOfFrameFinish(System.Action callback)` method allows executing a callback after the current frame's rendering is complete.
+
+## Quick Start
+
+### System Requirements
+
+- Unity 2017.1 or higher
+
+### Installation
+
+Choose one of the following methods:
+
+1. Add the following to the `dependencies` section in your project's `manifest.json`:
+   ```json
+   {"com.gameframex.unity.coroutine": "https://github.com/AlianBlank/com.gameframex.unity.coroutine.git"}
+   ```
+
+2. Use `Git URL` in Unity's Package Manager:
+   ```
+   https://github.com/AlianBlank/com.gameframex.unity.coroutine.git
+   ```
+
+3. Download the repository and place it in your Unity project's `Packages` directory. It will be loaded automatically.
+
+## Usage Examples
+
+### Start a Coroutine
 
 ```csharp
 IEnumerator YourCoroutine()
 {
-    // 协程执行的内容
+    // Coroutine execution content
     yield return null;
 }
-
-// ...
 
 CoroutineComponent coroutineComponent = gameObject.AddComponent<CoroutineComponent>();
 coroutineComponent.StartCoroutine(YourCoroutine());
 ```
 
-### 停止一个协程
+### Stop a Coroutine
 
 ```csharp
-// 假设您已经启动了一个协程，并且您有它的引用
 IEnumerator yourCoroutine = YourCoroutine();
 coroutineComponent.StopCoroutine(yourCoroutine);
 ```
 
-### 停止所有协程
+### Stop All Coroutines
 
 ```csharp
-// 停止该组件上所有正在运行的协程
 coroutineComponent.StopAllCoroutines();
 ```
 
-### 帧结束时执行回调
+### End of Frame Callback
 
 ```csharp
 void YourCallback()
 {
-    // 回调执行的内容
+    // Callback execution content
 }
-
-// ...
 
 coroutineComponent.WaitForEndOfFrameFinish(YourCallback);
 ```
 
-请注意，在添加`CoroutineComponent`到您的游戏对象时，确保您的场景中没有其他相同类型的组件，因为该类使用了`[DisallowMultipleComponent]`属性。
+Note: When adding `CoroutineComponent` to a GameObject, ensure there are no other components of the same type in your scene, as the class uses the `[DisallowMultipleComponent]` attribute.
 
-# 使用方式(任选其一)
+## Documentation & Resources
 
-1. 直接在 `manifest.json` 的文件中的 `dependencies` 节点下添加以下内容
-   ```json
-      {"com.gameframex.unity.coroutine": "https://github.com/AlianBlank/com.gameframex.unity.coroutine.git"}
-    ```
-2. 在Unity 的`Packages Manager` 中使用`Git URL` 的方式添加库,地址为：https://github.com/AlianBlank/com.gameframex.unity.coroutine.git
+- Documentation: https://gameframex.doc.alianblank.com
+- Repository: https://github.com/GameFrameX/com.gameframex.unity.coroutine
+- Issues: https://github.com/GameFrameX/com.gameframex.unity.coroutine/issues
 
-3. 直接下载仓库放置到Unity 项目的`Packages` 目录下。会自动加载识别
+## License
+
+See [LICENSE](LICENSE.md) for details.
