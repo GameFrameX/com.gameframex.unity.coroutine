@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.1...1.0.2) (2026-05-28)
+
+
+### Bug Fixes
+
+* **ci:** 统一 .github 工作流配置 ([2f483ab](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/2f483ab9edd5a8a13ada0a2d3bdfdefebd711eef))
+
 # Changelog
 
 ## [1.0.1](https://github.com/GameFrameX/com.gameframex.unity.coroutine/tree/1.0.1) (2025-06-01)
