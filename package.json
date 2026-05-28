@@ -1,12 +1,13 @@
 {
   "name": "com.gameframex.unity.coroutine",
   "displayName": "Game Frame X Coroutine",
-  "category": "Game Framework X",
+  "category": "GameFrameX",
   "description": "Game Frame X Coroutine Component",
   "version": "1.0.1",
   "unity": "2019.4",
   "keywords": [
-    "Game Framework X"
+    "GameFrameX",
+    "Coroutine"
   ],
   "repository": {
     "name": "com.gameframex.unity.coroutine",
