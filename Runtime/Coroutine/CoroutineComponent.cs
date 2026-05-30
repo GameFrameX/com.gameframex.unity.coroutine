@@ -68,6 +68,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// </summary>
         public new void StopAllCoroutines()
         {
+            // 先逐个停止已跟踪的协程，再清理字典，最后调用 base 清理所有未跟踪的协程
             foreach (var coroutine in m_CoroutineMap.Values)
             {
                 base.StopCoroutine(coroutine);
