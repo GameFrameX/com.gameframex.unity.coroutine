@@ -93,7 +93,8 @@ namespace GameFrameX.Coroutine.Runtime
         }
 
         /// <summary>
-        /// 等待当前帧结束
+        /// 等待当前帧结束。
+        /// 注意：如果在回调触发前通过 StopCoroutine/StopAllCoroutines 停止该协程，callback 将不会被执行。
         /// </summary>
         /// <param name="callback"></param>
         public void WaitForEndOfFrameFinish(System.Action callback)
