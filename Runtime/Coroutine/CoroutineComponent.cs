@@ -40,8 +40,10 @@ namespace GameFrameX.Coroutine.Runtime
                 base.StopCoroutine(coroutine);
                 m_CoroutineMap.TryRemove(enumerator, out _);
             }
-
-            base.StopCoroutine(enumerator);
+            else
+            {
+                base.StopCoroutine(enumerator);
+            }
         }
 
         /// <summary>
