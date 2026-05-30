@@ -86,7 +86,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// 等待当前帧结束
         /// </summary>
         /// <returns></returns>
-        private IEnumerator _WaitForEndOfFrameFinish(System.Action callback)
+        private IEnumerator WaitForEndOfFrameFinishInternal(System.Action callback)
         {
             yield return _waitForEndOfFrame;
             callback?.Invoke();
@@ -99,7 +99,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// <param name="callback"></param>
         public void WaitForEndOfFrameFinish(System.Action callback)
         {
-            StartCoroutine(_WaitForEndOfFrameFinish(callback));
+            StartCoroutine(WaitForEndOfFrameFinishInternal(callback));
         }
 
         protected override void Awake()
