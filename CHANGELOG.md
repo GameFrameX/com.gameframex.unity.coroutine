@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.2...1.0.3) (2026-05-30)
+
+
+### Bug Fixes
+
+* **coroutine:** 修复 StopCoroutine(IEnumerator) 重复调用 base 的问题 ([c0b5cf2](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/c0b5cf26662c4ef0e79529bf4721d7e9422b2313))
+* **coroutine:** 统一 AddComponentMenu 前缀为 GameFrameX ([dc9977a](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/dc9977a53405fa6cae2c933d12c2cd99a7dd523b))
+
 ## [1.0.2](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.1...1.0.2) (2026-05-28)
 
 
