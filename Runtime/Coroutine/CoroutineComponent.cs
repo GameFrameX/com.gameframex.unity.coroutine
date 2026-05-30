@@ -10,7 +10,7 @@ namespace GameFrameX.Coroutine.Runtime
     /// 注意：使用 new 关键字隐藏基类方法，必须通过 CoroutineComponent 类型引用调用，以确保协程被正确跟踪。
     /// </summary>
     [DisallowMultipleComponent]
-    [AddComponentMenu("Game Framework/Coroutine")]
+    [AddComponentMenu("GameFrameX/Coroutine")]
     public class CoroutineComponent : GameFrameworkComponent
     {
         /// <summary>
