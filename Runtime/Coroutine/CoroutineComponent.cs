@@ -6,14 +6,16 @@ using UnityEngine;
 namespace GameFrameX.Coroutine.Runtime
 {
     /// <summary>
-    /// 协程组件
+    /// 协程组件。对 Unity 原生协程 API 的封装和跟踪。
+    /// 注意：使用 new 关键字隐藏基类方法，必须通过 CoroutineComponent 类型引用调用，以确保协程被正确跟踪。
     /// </summary>
     [DisallowMultipleComponent]
     [AddComponentMenu("Game Framework/Coroutine")]
     public class CoroutineComponent : GameFrameworkComponent
     {
         /// <summary>
-        /// 执行过的迭代器
+        /// 执行过的迭代器。
+        /// 注意：IEnumerator 作为 key 使用引用相等性，StopCoroutine 必须传入与 StartCoroutine 相同的 IEnumerator 实例。
         /// </summary>
         private readonly ConcurrentDictionary<IEnumerator, UnityEngine.Coroutine> m_CoroutineMap = new ConcurrentDictionary<IEnumerator, UnityEngine.Coroutine>();
 
