@@ -43,7 +43,28 @@ Game Frame X Coroutine は、GameFrameX フレームワークに基づく Unity 
 
 ### インストール
 
-以下のいずれかの方法を選択してください：
+Unity プロジェクトの `Packages/manifest.json` を編集し、`scopedRegistries` セクションを追加してください：
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.gameframex.unity.coroutine": "1.0.2"
+  }
+}
+```
+
+`scopes` は、どのパッケージをこのレジストリから解決するかを制御します。`com.gameframex` で始まるパッケージのみがこのレジストリから取得されます。
+
+または以下の方法を選択してください：
 
 1. プロジェクトの `manifest.json` の `dependencies` セクションに以下を追加：
    ```json
@@ -54,8 +75,6 @@ Game Frame X Coroutine は、GameFrameX フレームワークに基づく Unity 
    ```
    https://github.com/AlianBlank/com.gameframex.unity.coroutine.git
    ```
-
-3. リポジトリをダウンロードして Unity プロジェクトの `Packages` ディレクトリに配置。自動的にロードされます。
 
 ## 使用例
 

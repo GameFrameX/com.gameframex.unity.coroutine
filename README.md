@@ -43,7 +43,28 @@ Game Frame X Coroutine is a Unity coroutine management package based on the Game
 
 ### Installation
 
-Choose one of the following methods:
+Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
+
+```json
+{
+  "scopedRegistries": [
+    {
+      "name": "GameFrameX",
+      "url": "https://gameframex.upm.alianblank.uk",
+      "scopes": [
+        "com.gameframex"
+      ]
+    }
+  ],
+  "dependencies": {
+    "com.gameframex.unity.coroutine": "1.0.2"
+  }
+}
+```
+
+`scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
+
+Alternatively, you can use one of the following methods:
 
 1. Add the following to the `dependencies` section in your project's `manifest.json`:
    ```json
@@ -54,8 +75,6 @@ Choose one of the following methods:
    ```
    https://github.com/AlianBlank/com.gameframex.unity.coroutine.git
    ```
-
-3. Download the repository and place it in your Unity project's `Packages` directory. It will be loaded automatically.
 
 ## Usage Examples
 
