@@ -125,6 +125,21 @@ Note: When adding `CoroutineComponent` to a GameObject, ensure there are no othe
 - Repository: https://github.com/GameFrameX/com.gameframex.unity.coroutine
 - Issues: https://github.com/GameFrameX/com.gameframex.unity.coroutine/issues
 
+
+## Dependencies
+
+| Package | Description |
+|---------|-------------|
+| (无) | - |
+
+
+## Community & Support
+
+- QQ Group: 467608841 / 233840761
+
+## Changelog
+
+See [Releases](https://github.com/GameFrameX/gameframex/com.gameframex.unity.coroutine/releases) for changelog.
 ## License
 
 See [LICENSE](LICENSE.md) for details.
