@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.3...1.0.4) (2026-06-07)
+
+
+### Bug Fixes
+
+* 补全包规范文件（LICENSE/CHANGELOG/URL 字段/unity 字段） ([8a5e38b](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/8a5e38bc0f11b0b415e5ed839116f7490a72e910))
+
 ## [1.0.3](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.2...1.0.3) (2026-05-30)
 
 
