@@ -45,39 +45,36 @@ Game Frame X Coroutine is a Unity coroutine management package based on the Game
 
 ### Installation
 
-Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
+Choose one of the following methods:
 
-```json
-{
-  "scopedRegistries": [
-    {
-      "name": "GameFrameX",
-      "url": "https://gameframex.upm.alianblank.uk",
-      "scopes": [
-        "com.gameframex"
-      ]
-    }
-  ],
-  "dependencies": {
-    "com.gameframex.unity.coroutine": "1.0.2"
-  }
-}
-```
-
-`scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
-
-Alternatively, you can use one of the following methods:
-
-1. Add the following to the `dependencies` section in your project's `manifest.json`:
+1. Edit your Unity project's `Packages/manifest.json` and add the `scopedRegistries` section:
    ```json
-   {"com.gameframex.unity.coroutine": "https://github.com/AlianBlank/com.gameframex.unity.coroutine.git"}
+   {
+     "scopedRegistries": [
+       {
+         "name": "GameFrameX",
+         "url": "https://gameframex.upm.alianblank.uk",
+         "scopes": [
+           "com.gameframex"
+         ]
+       }
+     ],
+     "dependencies": {
+       "com.gameframex.unity.coroutine": "1.0.3"
+     }
+   }
    ```
 
-2. Use `Git URL` in Unity's Package Manager:
-   ```
-   https://github.com/AlianBlank/com.gameframex.unity.coroutine.git
-   ```
+   `scopes` controls which packages are resolved through this registry. Only packages whose names start with `com.gameframex` will be fetched from it.
 
+2. Add to `manifest.json` dependencies:
+   ```json
+   {
+      "com.gameframex.unity.coroutine": "https://github.com/gameframex/com.gameframex.unity.coroutine.git"
+   }
+   ```
+3. Use **Package Manager** in Unity with **Git URL**: `https://github.com/gameframex/com.gameframex.unity.coroutine.git`
+4. Clone the repository into your Unity project's `Packages` directory. It will be loaded automatically.
 ## Usage Examples
 
 ### Start a Coroutine

@@ -45,39 +45,36 @@ Game Frame X Coroutine は、GameFrameX フレームワークに基づく Unity 
 
 ### インストール
 
-Unity プロジェクトの `Packages/manifest.json` を編集し、`scopedRegistries` セクションを追加してください：
+以下のいずれかの方法を選択してください：
 
-```json
-{
-  "scopedRegistries": [
-    {
-      "name": "GameFrameX",
-      "url": "https://gameframex.upm.alianblank.uk",
-      "scopes": [
-        "com.gameframex"
-      ]
-    }
-  ],
-  "dependencies": {
-    "com.gameframex.unity.coroutine": "1.0.2"
-  }
-}
-```
-
-`scopes` は、どのパッケージをこのレジストリから解決するかを制御します。`com.gameframex` で始まるパッケージのみがこのレジストリから取得されます。
-
-または以下の方法を選択してください：
-
-1. プロジェクトの `manifest.json` の `dependencies` セクションに以下を追加：
+1. Unity プロジェクトの `Packages/manifest.json` を編集し、`scopedRegistries` セクションを追加してください：
    ```json
-   {"com.gameframex.unity.coroutine": "https://github.com/AlianBlank/com.gameframex.unity.coroutine.git"}
+   {
+     "scopedRegistries": [
+       {
+         "name": "GameFrameX",
+         "url": "https://gameframex.upm.alianblank.uk",
+         "scopes": [
+           "com.gameframex"
+         ]
+       }
+     ],
+     "dependencies": {
+       "com.gameframex.unity.coroutine": "1.0.3"
+     }
+   }
    ```
 
-2. Unity の Package Manager で `Git URL` を使用：
-   ```
-   https://github.com/AlianBlank/com.gameframex.unity.coroutine.git
-   ```
+   `scopes` は、どのパッケージをこのレジストリから解決するかを制御します。`com.gameframex` で始まるパッケージのみがこのレジストリから取得されます。
 
+2. `manifest.json` の `dependencies` に直接追加：
+   ```json
+   {
+      "com.gameframex.unity.coroutine": "https://github.com/gameframex/com.gameframex.unity.coroutine.git"
+   }
+   ```
+3. Unity の **Package Manager** で **Git URL** を使用して追加：`https://github.com/gameframex/com.gameframex.unity.coroutine.git`
+4. リポジトリを Unity プロジェクトの `Packages` ディレクトリにクローンしてください。自動的に読み込まれます。
 ## 使用例
 
 ### コルーチンの開始
