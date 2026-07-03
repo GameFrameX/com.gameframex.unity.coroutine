@@ -11,6 +11,7 @@ namespace GameFrameX.Coroutine.Runtime
     /// </summary>
     [DisallowMultipleComponent]
     [AddComponentMenu("GameFrameX/Coroutine")]
+    [GameFrameXAutoComponent(-6500)]
     public class CoroutineComponent : GameFrameworkComponent
     {
         /// <summary>
