@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.4...1.1.0) (2026-07-03)
+
+
+### Features
+
+* **coroutine:** 注册 CoroutineComponent 到自动组件体系 ([9bac1ee](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/9bac1eede096403dc09dc5456fc4c504bde40246))
+
 ## [1.0.4](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.3...1.0.4) (2026-06-07)
 
 
