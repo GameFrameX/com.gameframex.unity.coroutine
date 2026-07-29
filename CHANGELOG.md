@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.1.0...1.2.0) (2026-07-29)
+
+
+### Features
+
+* **dependencies:** 添加 com.gameframex.unity 作为依赖项 ([a17a8ea](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/a17a8ea51703636821cf1cc17cf56fcfc70b7b5f))
+
 # [1.1.0](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.0.4...1.1.0) (2026-07-03)
 
 
