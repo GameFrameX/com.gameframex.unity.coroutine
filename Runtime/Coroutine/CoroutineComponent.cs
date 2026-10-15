@@ -25,6 +25,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// </summary>
         /// <param name="enumerator"></param>
         /// <returns></returns>
+        [UnityEngine.Scripting.Preserve]
         public new UnityEngine.Coroutine StartCoroutine(IEnumerator enumerator)
         {
             var ret = base.StartCoroutine(enumerator);
@@ -36,6 +37,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// 终止一个协程
         /// </summary>
         /// <param name="enumerator"></param>
+        [UnityEngine.Scripting.Preserve]
         public new void StopCoroutine(IEnumerator enumerator)
         {
             if (m_CoroutineMap.TryGetValue(enumerator, out var coroutine))
@@ -53,6 +55,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// 终止一个协程
         /// </summary>
         /// <param name="coroutine"></param>
+        [UnityEngine.Scripting.Preserve]
         public new void StopCoroutine(UnityEngine.Coroutine coroutine)
         {
             base.StopCoroutine(coroutine);
@@ -69,6 +72,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// <summary>
         /// 终止全部协程
         /// </summary>
+        [UnityEngine.Scripting.Preserve]
         public new void StopAllCoroutines()
         {
             // 先逐个停止已跟踪的协程，再清理字典，最后调用 base 清理所有未跟踪的协程
@@ -98,6 +102,7 @@ namespace GameFrameX.Coroutine.Runtime
         /// 注意：如果在回调触发前通过 StopCoroutine/StopAllCoroutines 停止该协程，callback 将不会被执行。
         /// </summary>
         /// <param name="callback"></param>
+        [UnityEngine.Scripting.Preserve]
         public void WaitForEndOfFrameFinish(System.Action callback)
         {
             StartCoroutine(WaitForEndOfFrameFinishInternal(callback));
