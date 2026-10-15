@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.2.0...1.2.1) (2026-10-15)
+
+
+### Bug Fixes
+
+* **runtime:** 补全 Preserve 防裁剪并升级核心依赖 ([8515b83](https://github.com/gameframex/com.gameframex.unity.coroutine/commit/8515b83953c6c48d82902cb5f6caac9df353d0a0))
+
 # [1.2.0](https://github.com/gameframex/com.gameframex.unity.coroutine/compare/1.1.0...1.2.0) (2026-07-29)
 
 

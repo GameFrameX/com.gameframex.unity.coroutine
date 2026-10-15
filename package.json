@@ -3,7 +3,7 @@
     "displayName": "Game Frame X Coroutine",
     "category": "GameFrameX",
     "description": "GameFrameX Coroutine — Unity centralized coroutine management package. Provides centralized start/stop control with thread-safe tracking (ConcurrentDictionary keyed by enumerator reference), bulk StopAllCoroutines that also covers untracked coroutines, and WaitForEndOfFrame callback helpers for frame-precise execution. Docs: https://gameframex.doc.alianblank.com\n\nGameFrameX Coroutine — Unity 协程集中管理功能包。提供协程的集中启动/停止控制，基于枚举器引用键的 ConcurrentDictionary 线程安全追踪，StopAllCoroutines 批量停止（同时覆盖未跟踪协程），以及 WaitForEndOfFrame 回调辅助实现帧精确执行。文档：https://gameframex.doc.alianblank.com",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "unity": "2019.4",
     "keywords": [
         "GameFrameX",
